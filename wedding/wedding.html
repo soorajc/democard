@@ -61,19 +61,18 @@
           const animatedMarker2 = document.querySelector("#animated-marker3");
 
           animatedMarker1.addEventListener('click', function(ev, target){
-              if (animatedMarker1.object3D.visible == true) {
-                  document.getElementById('maplink1').click();
+              if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
+                  document.getElementById('maplink3').click();
               }});
 
           animatedMarker2.addEventListener('click', function(ev, target){
-              if (animatedMarker2.object3D.visible == true) {
-                  //document.getElementById('maplink2').click();
-                  window.open("https://maps.google.com/?saddr=535+Legget+Drive+Kanata+Ontario&daddr=Parliament+Hill+Ottawa");
+              if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
+                  document.getElementById('maplink1').click();
               }});
 
           animatedMarker.addEventListener('click', function(ev, target){
               if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
-                document.getElementById('maplink3').click();
+                document.getElementById('maplink2').click();
               }
           });
     }});
