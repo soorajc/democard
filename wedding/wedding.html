@@ -45,8 +45,8 @@
         </a-marker>
           
         <a href="https://maps.google.com/?saddr=535+Legget+Drive+Kanata+Ontario&daddr=Parliament+Hill+Ottawa" id="maplink1"/>
-        <a href="https://api.whatsapp.com/send?phone=9846561627" id="maplink2" />
-        <a href="vnd.youtube:S7wCAquf9Us" id="maplink3" />
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Maria-Weds-Jason&dates=1623556854&details=Theyaregettingmarried" id="maplink2" />
+        <a href="vnd.youtube:W2IERghmzaI" id="maplink3" />
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
@@ -61,20 +61,17 @@
           const animatedMarker2 = document.querySelector("#animated-marker3");
 
           animatedMarker1.addEventListener('click', function(ev, target){
-              alert(12);
-              if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
-                  navigator.vibrate(1000);
+              if (animatedMarker1.object3D.visible == true) {
                   document.getElementById('maplink1').click();
               }});
 
           animatedMarker2.addEventListener('click', function(ev, target){
-              navigator.vibrate(1000);
-              if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
-                  document.getElementById('maplink2').click();
+              if (animatedMarker2.object3D.visible == true) {
+                  //document.getElementById('maplink2').click();
+                  window.open("https://maps.google.com/?saddr=535+Legget+Drive+Kanata+Ontario&daddr=Parliament+Hill+Ottawa");
               }});
 
           animatedMarker.addEventListener('click', function(ev, target){
-              navigator.vibrate(1000);
               if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
                 document.getElementById('maplink3').click();
               }
