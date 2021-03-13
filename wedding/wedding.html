@@ -56,17 +56,20 @@
 
           animatedMarker1.addEventListener('click', function(ev, target){
               if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
-                  window.open("https://www.google.com/maps?saddr=My+Location&daddr=Innov8+Coworking+Koramangala");
+                  navigator.vibrate(1000);
+                  window.open("geo:37.7749,-122.4194");
               }});
 
           animatedMarker2.addEventListener('click', function(ev, target){
+              navigator.vibrate(1000);
               if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
-                  window.open("https://jeetlab.com/");
+                  window.open("whatsapp://send?phone=3464478983");
               }});
 
           animatedMarker.addEventListener('click', function(ev, target){
+              navigator.vibrate(1000);
               if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
-                window.open("https://www.youtube.com/watch?v=S7wCAquf9Us");
+                window.open("vnd.youtube://v=S7wCAquf9Us");
               }
           });
     }});
