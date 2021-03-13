@@ -62,17 +62,21 @@
 
           animatedMarker1.addEventListener('click', function(ev, target){
               if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
-                  document.getElementById('maplink1').click();
+                  //document.getElementById('maplink1').click();
+                  window.open("https://maps.google.com/?saddr=535+Legget+Drive+Kanata+Ontario&daddr=Parliament+Hill+Ottawa");
               }});
 
           animatedMarker2.addEventListener('click', function(ev, target){
               if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
-                  document.getElementById('maplink2').click();
+                  //document.getElementById('maplink2').click();
+                  window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text=Maria-Weds-Jason&dates=1623556854&details=Theyaregettingmarried");
               }});
 
           animatedMarker.addEventListener('click', function(ev, target){
               if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
-                document.getElementById('maplink3').click();
+                //document.getElementById('maplink3').click();
+                window.open("https://www.youtube.com/watch?v=W2IERghmzaI&t=2s");
+            
               }
           });
     }});
