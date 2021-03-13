@@ -41,7 +41,10 @@
             <a-box position='0 0.5 0' material='opacity: 0.5; color:green'>
             </a-box>
         </a-marker>
-
+          
+        <a href="geo:37.7749,-122.4194" id="maplink1"/>
+        <a href="whatsapp://send?phone=3464478983" id="maplink2" />
+        <a href="vnd.youtube://v=S7wCAquf9Us" id="maplink3" />
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
@@ -57,19 +60,19 @@
           animatedMarker1.addEventListener('click', function(ev, target){
               if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
                   navigator.vibrate(1000);
-                  window.open("geo:37.7749,-122.4194");
+                  document.getElementById('maplink1').click();
               }});
 
           animatedMarker2.addEventListener('click', function(ev, target){
               navigator.vibrate(1000);
               if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
-                  window.open("whatsapp://send?phone=3464478983");
+                  document.getElementById('maplink2').click();
               }});
 
           animatedMarker.addEventListener('click', function(ev, target){
               navigator.vibrate(1000);
               if (animatedMarker.object3D.visible == true && ev.detail.cursorEl) {
-                window.open("vnd.youtube://v=S7wCAquf9Us");
+                document.getElementById('maplink3').click();
               }
           });
     }});
