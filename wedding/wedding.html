@@ -58,6 +58,7 @@
           const animatedMarker2 = document.querySelector("#animated-marker3");
 
           animatedMarker1.addEventListener('click', function(ev, target){
+              alert(1);
               if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
                   navigator.vibrate(1000);
                   document.getElementById('maplink1').click();
